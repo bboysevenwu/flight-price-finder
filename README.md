@@ -22,3 +22,15 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Build and deploy
+
+This is a static Vite + React SPA (React Router for client-side routing).
+
+```sh
+npm run build   # outputs static files to dist/
+```
+
+On Vercel, `vercel.json` sets the output to `dist/` and rewrites every path to
+`index.html`, so deep links such as `/app` resolve client-side. The build needs
+`VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
